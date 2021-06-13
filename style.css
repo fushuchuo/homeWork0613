@@ -1,0 +1,413 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: rgb(2, 21, 44);
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+.navigation{
+    height: 50px;
+    justify-content: center;
+    background-color: black;
+    display: flex;
+    text-align: center;
+    overflow: hidden;
+}
+.navigation div{
+    height: 50px;
+    line-height: 50px;
+}
+
+.navigation a:hover{
+    color: orange;
+}
+.navigation div:nth-child(1){
+    flex-grow: 10%;
+}
+.navigation div:nth-child(1) img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.navigation div:nth-child(2){
+    flex-grow: 40%;
+    display: flex;
+}
+.navigation div:nth-child(2) a{
+    flex-grow: 1;
+    font-size: 18px;
+    padding: 0 20px;
+}
+.navigation div:nth-child(3){
+    display: flex;
+    flex-grow: 30%;
+    font-size: 13px;
+}
+.navigation div:nth-child(3) a{
+    opacity: 0.8;
+    padding:0 20px;
+    flex-grow: 1;
+}
+.navigation div:nth-child(3) span{
+    float: left;
+    margin-top: 18px;
+    margin-right: -15px;
+    width: 20px;
+    height: 20px;
+    background-image: url(images/all.png);
+    background-repeat: no-repeat;
+    background-position: -230px -26px;
+}
+.navigation div:nth-child(4){
+    display: flex;
+    flex-grow: 30%;
+}
+.navigation div:nth-child(4) a {
+    flex-grow: 1;
+    padding: 0 20px;
+}
+.navigation div:nth-child(5){
+    height: 30px;
+    width: 250px;
+    line-height: 30px;
+    margin-top: 10px;
+    flex-grow: 15%;
+    background: url(images/search.png) no-repeat;
+}
+.navigation div:nth-child(5) input{
+    border: 0px;
+    outline: none;
+    background:none;
+    margin-left: 0px;
+    color: white;
+} 
+
+
+.player{
+    width: 1500px;
+    height: 1000px;
+}
+.lyric{
+    width:890px;
+    height:1000px ;
+    float: left;
+    margin: 0 auto;
+    color: white;
+}
+.lyric .headline {
+    overflow: hidden;
+    height: 180px;
+    width: 800px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+.lyric h1 {
+    font-size: 30px;
+    line-height: 80px;
+    margin-top: 40px;
+}
+.lyric .headline a{
+    font-size: 15px;
+    color: orange;
+}
+.lyric .headline span{
+    width: 13px;
+    height: 13px;
+    background-image: url(images/information.jpg);
+    background-repeat: no-repeat;
+}
+.lyric .words{
+    width: 800px;
+    height: 720px;
+    float: left;
+}
+.lyric ul li {
+    text-align: center;
+    line-height: 2.5em;
+    font-size: 16px;
+}
+.lyric .words li:nth-child(6) {
+    color: orange;
+    font-size: 20px;
+}
+.lyric .drag {
+    float: left;
+    width: 10px;
+    height: 120px;
+    margin-top: 120px;
+    background-color: #ccc;
+    opacity: 0.5;
+    border-radius: 10px;
+}
+
+
+.broadcast{
+    width: 600px;
+    float: right;
+    margin: 0 auto;
+}
+@keyframes player{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.picture{
+    width: 400px;
+    height: 400px;
+    background: url(images/1.jpg);
+    background-size: contain;
+    border-radius: 200px;
+    margin-top: 70px;
+    animation: player 15s  linear infinite;
+}
+.control{
+    height: 200px;
+    width: 500px;
+}
+#starPlayer{
+    position: absolute;
+    top: 440px;
+    left:790px
+}
+.play{
+    position:absolute;
+    clip:rect(105px,177px,153px,137px);
+}
+.zan{
+    position:absolute ;
+    clip:rect(194px,219px,234px,179px);
+    margin-top: -82px;
+    margin-left: -42px;
+}
+.speed{
+    position: absolute;
+    width: 260px;
+    height: 60px;
+    float: left;
+    margin: 50px 0px 0px 80px;
+}
+.speed .prograssBar{
+    width: 260px;
+    height: 4px;
+    background-color: darkgray;
+}
+#prograssBtn{
+    width: 0px;
+    height: 4px;
+    background-color: darkgoldenrod;
+}
+#ProgressPoint {
+    position: relative;
+    top: -7px;
+	width: 10px;
+	height: 10px;
+    background: yellow;
+    border-radius: 5px;
+}
+#time{
+    margin: 45px 110px 0px 0px;
+    color: darkgrey;
+    font-size: 12px;
+    float: right;
+}
+#sound{
+    float: right;
+    width: 23px;
+    height: 18px;
+    margin: 42px -63px 0px 0px;
+    background-image: url(images/all.png);
+    background-position: -262px -111px;
+}
+.broadcast .downLoad{
+    position: relative;
+    top: -90px;
+    left: 120px;
+    width: 190px;
+    height: 40px;
+    text-align: center;
+    border-radius: 90px;
+    background:url(images/2.jpg) -3px -50px no-repeat;
+}
+.broadcast .downLoad div{
+    float: left;
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 19px;
+    height: 20px;
+    background:url(images/2.jpg) no-repeat;
+}
+.broadcast .downLoad a{
+    float: right;
+    margin-right: 25px;
+    line-height: 40px;
+    font-size: 15px;
+}
+.user{
+    width: 400px;
+    height: 80px;
+    position: relative;
+    top: -30px;
+    left: 20px;
+}
+.user .headPortrait{
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin-top: -5px;
+    margin-left: 10px;
+    background: url(images/郭子仪.jpg);
+    border-radius: 40px;
+    background-size: 100% 100%;
+}
+.user .show{
+    width: 300px;
+    height: 70px;
+    float: right;
+    border-radius: 20px;
+    background: url(images/showAdBg.jpg);
+    background-size: 100%;
+}
+.user .show p{
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    color: rgb(11, 11, 43);
+}
+.user .show img{
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+}
+.user .show a{
+    color: midnightblue;
+    float: right;
+    margin-right: 20px;
+}
+
+
+.comment{
+    position: relative;
+    top: -50px;
+    width: 1200px;
+    margin: 0 auto;
+}
+.comment_on {
+    width: 800px;
+    margin: 0 auto;
+}
+.comment_on h4 {
+    width: 800px;
+    line-height: 40px;
+    font-size: 18px;
+    float: left;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+    border-bottom: 2px solid #ccc;
+}
+.comment .commentPic {
+    float: left;
+    width: 50px;
+    height: 50px;
+    background-image: url(images/郭子仪.jpg);
+    background-size: 100%;
+}
+.comment .commentWord {
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 720px;
+    height: 200px;
+}
+#textarea {
+    width: 100%;
+    height: 150px;
+    font-size: 18px;
+    line-height: 2em;
+    border: 1px solid #ccc;
+    background-color: rgba(58, 100, 107, 0.4);
+}
+.emoji{
+    position: relative;
+    height: 40px;
+    margin-top: 15px;
+}
+.comment_emoji {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(images/smile.png);
+    background-size: 100%;
+    border-radius: 10px;
+}
+.commentWord .words {
+    position: absolute;
+    top: 0;
+    right: 120px;
+    top: 10px;
+    color: mintcream;
+}
+#submit_btn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 10px;
+    border: 0px;
+    background-color: orange;
+    color: white;
+    font-size: 20px;
+}
+.comment .great{
+    width: 1000px;
+    float: left;
+}
+.comment .great .greatComment {
+    width: 800px;
+    border-top: 50px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    color: white;
+    float: left;
+}
+.comment .great .greatComments {
+    line-height: 60px;
+    text-indent: 20px;
+    font-size: 18px;
+    color: white;
+    height: 500px;
+    width: 800px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+
+.page{
+    margin:0 auto;
+    height: 50px;
+    width: 500px;
+}
+
+.page li {
+    cursor: pointer;
+    float: left;
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+    border-radius: 15px;
+    margin: 0 10px;
+    line-height: 30px;
+    text-align: center;
+    background-color: rgb(123, 207, 240);
+}
+.page .first_page{
+    background-color: orange;
+}
